@@ -9,8 +9,14 @@ import {
   TouchableOpacity,
 } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
+// import { Inputs } from "../../../components/inputs";
+// import { Inputs } from "../../../components/inputs/input";
+// import { Buttons } from "../../../components/inputs/button";
+
 import { LinearGradient } from "expo-linear-gradient";
 import Checkbox from "expo-checkbox";
+import { Buttons, Inputs } from "../../../components";
+
 const SignUp = () => {
   const [isChecked, setChecked] = useState(false);
   return (
@@ -26,7 +32,7 @@ const SignUp = () => {
         </View>
         <Text style={styles.Mainheader}>Sign Up</Text>
       </View>
-      <View style={{ paddingTop: 5, marginTop: 45, alignSelf: "center" }}>
+      <View style={{ paddingTop: 1, marginTop: 45, alignSelf: "center" }}>
         <Image
           source={{
             uri: "https://shayariholic.com/wp-content/uploads/2022/09/sweet-cat-dp-for-whatsapp-2.jpg",
@@ -34,7 +40,35 @@ const SignUp = () => {
           style={{ width: 80, height: 80, borderRadius: 40, marginBottom: -50 }}
         />
       </View>
-      <Text style={styles.label}>First Name</Text>
+
+      <Inputs
+        name="First Name"
+        placeholder="Enter your First Name"
+        Type="ascii-capable"
+        // backgroundColor="blue"
+      />
+      <Inputs
+        name="Last Name"
+        placeholder="Enter your First Name"
+        Type="ascii-capable"
+      />
+      <Inputs
+        name="Email"
+        placeholder="Enter your Email"
+        Type="email-address"
+      />
+      <Inputs
+        name="Password"
+        placeholder="Enter Your Password"
+        password={true}
+      />
+      <Inputs
+        name="Confirm Password"
+        placeholder="Re-Enter Your Password"
+        password={true}
+      />
+
+      {/* <Text style={styles.label}>First Name</Text>
       <View style={styles.email}>
         <TextInput
           placeholder="Enter your Email"
@@ -73,7 +107,7 @@ const SignUp = () => {
           secureTextEntry={true}
           style={styles.input}
         />
-      </View>
+      </View> */}
       <View style={styles.check}>
         <View style={{ flexDirection: "row" }}>
           <Checkbox
@@ -92,22 +126,75 @@ const SignUp = () => {
           <Text style={styles.txt}>Privacy Policy</Text>
         </View>
       </View>
-      <TouchableOpacity style={styles.SignUp}>
+
+      <Buttons title="Sign Up" />
+      {/* <TouchableOpacity style={styles.SignUp}>
         <LinearGradient style={styles.SignUp} colors={["#4c669f", "#D89BF6"]}>
-          <Text style={styles.SignBtn}>Sign In</Text>
+          <Text style={styles.SignBtn}>Sign Up</Text>
         </LinearGradient>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+
       <View style={styles.accc}>
         <Text>Already have an account</Text>
         <Text style={styles.txxt}>Sign Up</Text>
       </View>
       <View style={styles.accd}>
-        <Text>Having trouble</Text>
+        <Text style={styles.txxh}>Having trouble</Text>
         <Text style={styles.txxd}>Contact Us</Text>
       </View>
     </View>
   );
 };
+{
+  /* <TouchableOpacity style={styles.SignUp}>
+<LinearGradient style={styles.SignUp} colors={["#4c669f", "#D89BF6"]}>
+  <Text style={styles.SignBtn}>Sign Up</Text>
+</LinearGradient>
+</TouchableOpacity> */
+}
+{
+  /* <Text style={styles.label}>First Name</Text>
+      <View style={styles.email}>
+        <TextInput
+          placeholder="Enter your Email"
+          keyboardType="email-address"
+          style={styles.input}
+        />
+      </View>
+      <Text style={styles.label}>Last Name</Text>
+      <View style={styles.email}>
+        <TextInput
+          placeholder="Enter your Email"
+          keyboardType="email-address"
+          style={styles.input}
+        />
+      </View>
+      <Text style={styles.label}>Email</Text>
+      <View style={styles.email}>
+        <TextInput
+          placeholder="Enter your Email"
+          keyboardType="email-address"
+          style={styles.input}
+        />
+      </View>
+      <Text style={styles.label}>Password</Text>
+      <View style={styles.email}>
+        <TextInput
+          placeholder="enter your password"
+          secureTextEntry={true}
+          style={styles.input}
+        />
+      </View>
+      <Text style={styles.label}>Confirm Password</Text>
+      <View style={styles.email}>
+        <TextInput
+          placeholder="enter your password"
+          secureTextEntry={true}
+          style={styles.input}
+        />
+      </View> */
+}
+// input
 {
   /* <View style={styles.container}>
 <View style={styles.top}>
@@ -181,41 +268,42 @@ const styles = StyleSheet.create({
     top: 10,
     fontWeight: "600",
   },
-  label: {
-    fontSize: 13,
-    fontWeight: "700",
-    top: 30,
-    width: "90%",
-    alignSelf: "center",
-    marginTop: 15,
-  },
-  email: {
-    borderColor: "black",
-    borderWidth: 1,
-    flexDirection: "row",
-    borderWidth: 1,
-    width: "90%",
-    height: 40,
-    color: "black",
-    top: 35,
-    paddingLeft: 20,
-    borderRadius: 6,
-    backgroundColor: "#E8E8E8",
-    borderColor: "#BEBEBE",
-    alignItems: "center",
-    alignSelf: "center",
-  },
-  input: {
-    fontSize: 16,
-    color: "black",
-    paddingLeft: 10,
-    width: "90%",
-  },
+  // label: {
+  //   fontSize: 13,
+  //   fontWeight: "700",
+  //   top: 30,
+  //   width: "90%",
+  //   alignSelf: "center",
+  //   marginTop: 15,
+  // },
+  // email: {
+  //   borderColor: "black",
+  //   borderWidth: 1,
+  //   flexDirection: "row",
+  //   borderWidth: 1,
+  //   width: "90%",
+  //   height: 40,
+  //   color: "black",
+  //   top: 35,
+  //   paddingLeft: 20,
+  //   borderRadius: 6,
+  //   backgroundColor: "#E8E8E8",
+  //   borderColor: "#BEBEBE",
+  //   alignItems: "center",
+  //   alignSelf: "center",
+  // },
+  // input: {
+  //   fontSize: 16,
+  //   color: "black",
+  //   paddingLeft: 10,
+  //   width: "90%",
+  // },
   check: {
     width: "100%",
     flexDirection: "row",
-    marginTop: 50,
+    marginTop: 43,
     marginLeft: 20,
+    marginVertical: 5,
   },
   acc: {
     flexDirection: "row",
@@ -234,15 +322,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 2,
     alignSelf: "center",
+    // marginVertical: 10,
   },
   SignBtn: {
     fontSize: 18,
     fontWeight: "500",
+    color: "white",
   },
   accc: {
     flexDirection: "row",
     marginTop: 2,
     alignSelf: "center",
+    marginVertical: 5,
   },
   txxt: {
     color: "blue",
@@ -253,6 +344,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginTop: 20,
     alignSelf: "center",
+  },
+  txxh: {
+    fontWeight: "800",
   },
   txxd: {
     color: "blue",
