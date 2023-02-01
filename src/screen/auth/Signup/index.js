@@ -9,14 +9,10 @@ import {
   TouchableOpacity,
 } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
-// import { Inputs } from "../../../components/inputs";
-// import { Inputs } from "../../../components/inputs/input";
-// import { Buttons } from "../../../components/inputs/button";
 
 import { LinearGradient } from "expo-linear-gradient";
 import Checkbox from "expo-checkbox";
-import { Buttons, Inputs } from "../../../components";
-
+import { Inputs, Buttons } from "../../../components";
 const SignUp = () => {
   const [isChecked, setChecked] = useState(false);
   return (
@@ -62,6 +58,7 @@ const SignUp = () => {
         placeholder="Enter Your Password"
         password={true}
       />
+
       <Inputs
         name="Confirm Password"
         placeholder="Re-Enter Your Password"

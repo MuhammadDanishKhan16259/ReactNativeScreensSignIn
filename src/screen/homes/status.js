@@ -26,16 +26,18 @@ const Status = () => {
     <SafeAreaView style={styles.main}>
       <View style={{ flex: 1 }}>
         <ImageBackground style={{ flex: 1 }} resizeMode="cover" source={image}>
-          <Text style={styles.text}>
-            Today is 20 feb wish you very happy birthday
-          </Text>
-          <Entypo
-            name="emoji-happy"
-            color={"black"}
-            size={25}
-            style={{ textAlign: "center", marginTop: 20 }}
-          />
-          <View style={{ textAlign: "center", marginTop: "80%" }}>
+          <View style={styles.Maincontent}>
+            <Text style={styles.text}>
+              Today is 20 feb wish you very happy birthday
+            </Text>
+            <Entypo
+              name="emoji-happy"
+              color={"black"}
+              size={25}
+              style={{ textAlign: "center", marginTop: 20 }}
+            />
+          </View>
+          <View style={{ textAlign: "center", marginTop: "20%" }}>
             {visible === false ? (
               <TouchableOpacity
                 onPress={() => setVisible(true)}
@@ -141,15 +143,21 @@ const Status = () => {
           source={image}
         /> */
 }
+// style={{ textAlign: "center", marginTop: 20 }}
 const styles = StyleSheet.create({
   main: {
     flex: 1,
+  },
+  Maincontent: {
+    // textAlign: "center",
+    // marginTop: 20,
+    marginVertical: "60%",
   },
   text: {
     color: "white",
     fontSize: 30,
     textAlign: "center",
-    marginTop: "60%",
+    // marginTop: "60%",
     width: "70%",
     // backgroundColor: "red",
     alignSelf: "center",
