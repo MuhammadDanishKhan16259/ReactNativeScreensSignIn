@@ -10,6 +10,7 @@ import {
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { LinearGradient } from "expo-linear-gradient";
 import Checkbox from "expo-checkbox";
+import { Buttons } from "../../../components";
 const Login = () => {
   const [isChecked, setChecked] = useState(false);
 
@@ -71,14 +72,16 @@ const Login = () => {
               </View>
               <Text>Forget password?</Text>
             </View>
-            <TouchableOpacity style={styles.SignUp}>
+            {/* <TouchableOpacity style={styles.SignUp}>
               <LinearGradient
                 style={styles.SignUp}
                 colors={["#4c669f", "#D89BF6"]}
               >
                 <Text style={styles.SignBtn}>Sign In</Text>
               </LinearGradient>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
+            {/* navigation.navigate("Home") */}
+            <Buttons title="Sign In" />
             <View style={styles.acc}>
               <Text>Create an account</Text>
               <Text style={styles.txt}>Sign Up</Text>
